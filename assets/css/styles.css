@@ -1,0 +1,84 @@
+:root {
+    --primary-bg: #1B2438;
+    --secondary-bg: #1F2B47;
+    --accent-color: #31B7D1;
+    --text-color: #FFFFFF;
+    --text-muted: #7086AB;
+    --border-color: #2A3854;
+}
+
+/* Reset margin and padding to eliminate unwanted space */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style commun pour tous les boutons d'action */
+.btn-action {
+    background-color: rgba(49, 183, 209, 0.1);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.btn-action:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.btn-action i {
+    font-size: 1rem;
+}
+
+/* Style pour les boutons de suppression/danger */
+.btn-danger {
+    background-color: rgba(255, 69, 58, 0.1);
+    color: #FF453A;
+    border: 1px solid #FF453A;
+}
+
+.btn-danger:hover {
+    background-color: #FF453A;
+    color: var(--text-color);
+}
+
+/* Style pour les boutons secondaires */
+.btn-secondary {
+    background-color: rgba(112, 134, 171, 0.1);
+    color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-muted);
+    color: var(--text-color);
+}
+
+/* Style pour les petits boutons */
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Style pour les boutons larges */
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Style pour les boutons désactivés */
+.btn-action:disabled,
+.btn-action.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+} 
