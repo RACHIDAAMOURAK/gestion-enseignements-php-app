@@ -1,0 +1,8 @@
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .xml .json .php
+
+<Files *.php>
+    AddType 'text/html; charset=UTF-8' .php
+</Files>
+
+php_value default_charset "UTF-8" 

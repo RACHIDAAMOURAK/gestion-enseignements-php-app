@@ -1,0 +1,182 @@
+/* 
+ * Fichier de thème central pour l'application web-project2
+ * Ce fichier définit les variables de couleur et les styles de base
+ * pour assurer une cohérence visuelle dans toute l'application.
+ */
+
+:root {
+    /* Palette de couleurs principale */
+    --primary-bg: #1B2438;           /* Fond principal */
+    --secondary-bg: #1F2B47;         /* Fond des cartes/sections */
+    --accent-color: #31B7D1;         /* Couleur d'accent pour les éléments interactifs */
+    --text-color: #FFFFFF;           /* Texte principal */
+    --text-muted: #7086AB;           /* Texte secondaire */
+    --border-color: #2A3854;         /* Couleur de bordure */
+    
+    /* Variables structurelles */
+    --header-bg: var(--secondary-bg);
+    --top-nav-height: 60px;
+    --footer-height: 50px;
+    --sidebar-width-collapsed: 50px;
+    --sidebar-width-expanded: 250px;
+    
+    /* Variables pour les espacements */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --content-padding: var(--spacing-md);
+    --section-margin: var(--spacing-md);
+    --card-padding: var(--spacing-md);
+    --form-spacing: var(--spacing-md);
+}
+
+/* Styles de base */
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style des cartes */
+.card {
+    background-color: var(--secondary-bg);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    margin-bottom: var(--spacing-lg);
+}
+
+.card-header {
+    background-color: rgba(49, 183, 209, 0.05);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: var(--spacing-md);
+}
+
+.card-body {
+    padding: var(--spacing-lg);
+}
+
+/* Style des boutons */
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: rgba(49, 183, 209, 0.8);
+    border-color: var(--accent-color);
+}
+
+.btn-outline-primary {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Style des formulaires */
+.form-control, .form-select {
+    background-color: rgba(31, 43, 71, 0.5);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(31, 43, 71, 0.7);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(49, 183, 209, 0.25);
+    color: var(--text-color);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* Style des tableaux */
+.table {
+    color: var(--text-color);
+}
+
+.table thead th {
+    background-color: var(--secondary-bg);
+    border-color: var(--border-color);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(49, 183, 209, 0.05);
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: rgba(49, 183, 209, 0.1);
+}
+
+/* Alertes */
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.2);
+    border-color: rgba(25, 135, 84, 0.3);
+    color: #75b798;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: rgba(220, 53, 69, 0.3);
+    color: #ea868f;
+}
+
+.alert-info {
+    background-color: rgba(49, 183, 209, 0.2);
+    border-color: rgba(49, 183, 209, 0.3);
+    color: #6edff6;
+}
+
+.alert-warning {
+    background-color: rgba(255, 193, 7, 0.2);
+    border-color: rgba(255, 193, 7, 0.3);
+    color: #ffda6a;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-bg);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer span {
+    color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-body {
+        padding: var(--spacing-md);
+    }
+    
+    .row {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
+    
+    .col, .col-md-6, .col-lg-4 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}

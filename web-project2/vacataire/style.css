@@ -1,0 +1,117 @@
+/* Styles supplémentaires pour la section Vacataire */
+
+/* Variables communes */
+:root {
+    --primary-bg: #1B2438;
+    --secondary-bg: #1F2B47;
+    --accent-color: #31B7D1;
+    --text-color: #FFFFFF;
+    --text-muted: #7086AB;
+    --border-color: #2A3854;
+}
+
+/* Styles pour la page de création de vacataire */
+.card-header.bg-primary {
+    background: var(--secondary-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.btn-primary {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    opacity: 0.9;
+}
+
+.form-control, .form-select {
+    background-color: rgba(35, 44, 67, 0.5);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(35, 44, 67, 0.7);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(30, 198, 217, 0.25);
+    color: var(--text-color);
+}
+
+.form-select option {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+}
+
+/* Badges pour les types de cours */
+.badge.bg-info {
+    background-color: rgba(49, 183, 209, 0.2) !important;
+    color: #31b7d1 !important;
+    border: 1px solid #31b7d1;
+}
+
+.badge.bg-primary {
+    background-color: rgba(138, 80, 180, 0.2) !important;
+    color: #8a50b4 !important;
+    border: 1px solid #8a50b4;
+}
+
+.badge.bg-success {
+    background-color: rgba(25, 135, 84, 0.2) !important;
+    color: #198754 !important;
+    border: 1px solid #198754;
+}
+
+/* Styles pour les tableaux */
+.table {
+    color: var(--text-color) !important;
+}
+
+.table-light, .table-light > th, .table-light > td {
+    background-color: rgba(35, 44, 67, 0.5) !important;
+    color: var(--text-color) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    color: var(--text-color);
+    background-color: rgba(35, 44, 67, 0.3);
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: rgba(49, 183, 209, 0.1);
+}
+
+/* Modal styles */
+.modal-content {
+    background-color: var(--primary-bg);
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Alert styles */
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.2);
+    border-color: rgba(25, 135, 84, 0.3);
+    color: #75b798;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: rgba(220, 53, 69, 0.3);
+    color: #ea868f;
+}
+
+/* Card styles */
+.card {
+    background-color: var(--secondary-bg);
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+} 

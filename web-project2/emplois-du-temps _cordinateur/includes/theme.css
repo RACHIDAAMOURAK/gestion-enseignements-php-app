@@ -1,0 +1,385 @@
+/* Variables de couleur et de style pour harmoniser avec le thème principal */
+:root {
+    --primary-bg: #181f2c;
+    --secondary-bg: #232c43;
+    --accent-color: #1ec6d9;
+    --text-color: #fff;
+    --text-muted: #6c8bbd;
+    --border-color: #232c43;
+    --card-bg: #1F2B47;
+    --header-height: 60px;
+    --footer-height: 50px;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+}
+
+/* Styles de base */
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--header-height);
+    padding-bottom: var(--footer-height);
+}
+
+/* Style du header */
+.navbar {
+    background-color: var(--secondary-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.5rem var(--spacing-md);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--text-color) !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--secondary-bg);
+    border-color: var(--border-color);
+}
+
+.dropdown-item {
+    color: var(--text-color);
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: rgba(49, 183, 209, 0.1);
+    color: var(--accent-color);
+}
+
+/* Style des conteneurs */
+.container {
+    padding: var(--spacing-md);
+}
+
+/* Style des cartes */
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: var(--spacing-lg);
+}
+
+.card-header {
+    background-color: rgba(49, 183, 209, 0.1);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: var(--spacing-md);
+}
+
+.card-body {
+    padding: var(--spacing-lg);
+}
+
+/* Style des tableaux */
+.table {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.table th, .table td {
+    border-color: var(--border-color);
+}
+
+.table thead th {
+    background-color: var(--secondary-bg);
+}
+
+.table-bordered {
+    border-color: var(--border-color);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(49, 183, 209, 0.05);
+}
+
+/* Style des formulaires */
+.form-control, .form-select {
+    background-color: var(--secondary-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--secondary-bg);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(49, 183, 209, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.form-label {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Style des boutons */
+.btn-primary {
+    background-color: transparent;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--text-muted);
+    color: var(--text-muted);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--primary-bg);
+}
+
+.btn-success {
+    background-color: transparent;
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-success:hover, .btn-success:focus {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: transparent;
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+.btn-info {
+    background-color: transparent;
+    border-color: #0dcaf0;
+    color: #0dcaf0;
+}
+
+.btn-info:hover, .btn-info:focus {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+    color: #fff;
+}
+
+/* Style des alertes */
+.alert {
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: none;
+}
+
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.2);
+    color: #75b798;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #ea868f;
+}
+
+.alert-info {
+    background-color: rgba(13, 202, 240, 0.2);
+    color: #6edff6;
+}
+
+.alert-warning {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffda6a;
+}
+
+/* Style du footer */
+.footer {
+    background-color: var(--secondary-bg) !important;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+}
+
+/* Style spécifique pour les séances d'emploi du temps */
+.seance {
+    padding: 8px;
+    margin: 2px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.seance:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cm { 
+    background-color: rgba(49, 183, 209, 0.1); 
+    border: 1px solid rgba(49, 183, 209, 0.3); 
+}
+
+.td { 
+    background-color: rgba(138, 80, 180, 0.1); 
+    border: 1px solid rgba(138, 80, 180, 0.3); 
+}
+
+.tp { 
+    background-color: rgba(25, 135, 84, 0.1); 
+    border: 1px solid rgba(25, 135, 84, 0.3); 
+}
+
+/* Styles pour la gestion des emplois du temps */
+.emplois-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.emplois-section h2 {
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.emplois-table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.emplois-table th {
+    background-color: var(--secondary-bg);
+    color: var(--accent-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.emplois-table td {
+    vertical-align: middle;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-badge.actif {
+    background-color: rgba(25, 135, 84, 0.2);
+    color: #75b798;
+}
+
+.status-badge.inactif {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #ea868f;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Style des modals */
+.modal-content {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    background-color: var(--secondary-bg);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--accent-color);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: var(--spacing-lg);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.close {
+    color: var(--text-color);
+    opacity: 0.8;
+    text-shadow: none;
+}
+
+.close:hover {
+    color: var(--accent-color);
+    opacity: 1;
+}
+
+/* Amélioration des inputs date */
+input[type="date"] {
+    position: relative;
+    padding: 0.375rem 0.75rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: var(--text-muted);
+    padding: 0.375rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card-body {
+        padding: var(--spacing-md);
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .emplois-table th, 
+    .emplois-table td {
+        padding: 0.5rem;
+    }
+} 
